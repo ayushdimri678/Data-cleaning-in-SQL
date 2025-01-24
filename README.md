@@ -43,10 +43,14 @@ o	The STR_TO_DATE function is used for conversion, followed by altering the tabl
 **POPULATING NULL AND BLANK VALUES**
 
 Filling missing values is crucial for maintaining data quality.
+
 •	The industry field contained some null values. These were populated using information already present in the dataset, identified through analysis. The UPDATE statement was used to resolve this issue effectively.
 
 **REMOVING UNNECESSARY ROWS AND COLUMNS**
+
 The layoffs_staging2 table was further improved by removing irrelevant data:
+
 •	Columns total_laid_off and percentage_laid_off are essential for analysis.
+
 •	Rows where both these columns contained null values were deleted, as they did not add value to the dataset. This was achieved using a combination of DELETE and WHERE statements.
 
