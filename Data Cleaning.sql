@@ -8,6 +8,9 @@ select * from layoffs;
 -- 3 NULL VALUES OR BLANK VALUES
 -- 4 REMOVE ROWS AND COLUMNS WHICH ARE NOT NECESSARY
 
+
+-- 1 REMOVE DUPLICATES
+
 create table layoffs_staging
 like layoffs;
 
@@ -16,19 +19,7 @@ select  * from layoffs;
 
 select * from layoffs_staging;
 
-select * , 
-row_number() over (partition by
- company , location , industry , total_laid_off , percentage_laid_off, 
- `date`,stage , country , funds_raised_millions) as count1
-from layoffs_staging;
 
-with duplicate_cte as ( select * , 
-row_number() over (partition by
- company , location , industry , total_laid_off , percentage_laid_off, 
- `date`,stage , country , funds_raised_millions) as count1
-from layoffs_staging)
-select * from duplicate_cte 
-where count1 > 1;
 
 select distinct *
 from layoffs_staging;
