@@ -1,12 +1,16 @@
 **OVERVIEW**
 
 This project involves cleaning and standardizing a database named world_layoffs, which contains details about different companies and the layoffs they have done. The main table in the database is named layoffs. The project is divided into four key steps:
-**1.	**REMOVING DUPLICATES
+1.REMOVING DUPLICATES
+
 2.	STANDARDIZING DATA
-3.	POPULATING NULL AND BLANK VALUES
-4.	REMOVING UNNECESSARY ROWS AND COLUMNS****
+   
+4.	POPULATING NULL AND BLANK VALUES
+   
+6.	REMOVING UNNECESSARY ROWS AND COLUMNS
 
 **REMOVING DUPLICATES**
+
 •	Backup Creation: A copy of the raw data is created to preserve the original dataset. This allows us to roll back in case of errors. The backup table is named layoff_staging.
 •	Removing Duplicates: Duplicate rows are identified and removed using the DISTINCT function. A new table, layoffs_staging2, is created, which excludes duplicate rows to ensure data integrity.
 
@@ -35,6 +39,7 @@ o	The STR_TO_DATE function is used for conversion, followed by altering the tabl
 
 
 **POPULATING NULL AND BLANK VALUES**
+
 Filling missing values is crucial for maintaining data quality.
 •	The industry field contained some null values. These were populated using information already present in the dataset, identified through analysis. The UPDATE statement was used to resolve this issue effectively.
 
