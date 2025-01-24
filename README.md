@@ -23,18 +23,25 @@ This project involves cleaning and standardizing a database named world_layoffs,
 Standardizing data involves resolving inconsistencies and formatting issues to improve data quality. The following actions were performed:
 
 1.	Removing Unnecessary Spaces:
+2.	
 o	The TRIM function is used to eliminate extra spaces in the company field.
 
 3.	Resolving Inconsistencies:
+4.	
 o	Entries like crypto and cryptocurrency in the industry field are standardized to crypto.
+
 o	A combination of UPDATE and LIKE statements is used to perform this transformation.
 
-5.	Fixing Field Format:
+6.	Fixing Field Format:
+7.	
 o	Inconsistent entries in the country field (e.g., United States. with a trailing period) are corrected.
+
 o	The TRIM and TRAILING functions are used to remove unwanted characters, and the data is updated accordingly.
 
-7.	Converting Date Field Data Type:
+8.	Converting Date Field Data Type:
+9.	
 o	The date field, stored as a string, is converted to a proper DATE data type.
+
 o	The STR_TO_DATE function is used for conversion, followed by altering the table to update the field’s data type.
 
 
