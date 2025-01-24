@@ -1,6 +1,7 @@
 **OVERVIEW**
 
 This project involves cleaning and standardizing a database named world_layoffs, which contains details about different companies and the layoffs they have done. The main table in the database is named layoffs. The project is divided into four key steps:
+
 1.REMOVING DUPLICATES
 
 2.	STANDARDIZING DATA
@@ -12,6 +13,7 @@ This project involves cleaning and standardizing a database named world_layoffs,
 **REMOVING DUPLICATES**
 
 •	Backup Creation: A copy of the raw data is created to preserve the original dataset. This allows us to roll back in case of errors. The backup table is named layoff_staging.
+
 •	Removing Duplicates: Duplicate rows are identified and removed using the DISTINCT function. A new table, layoffs_staging2, is created, which excludes duplicate rows to ensure data integrity.
 
 
