@@ -61,3 +61,9 @@ The layoffs_staging2 table was further improved by removing irrelevant data:
 
 •	Rows where both these columns contained null values were deleted, as they did not add value to the dataset. This was achieved using a combination of DELETE and WHERE statements.
 
+**HOW TO NAVIGATE**
+
+1 Refer to dat-cleaning.sql to see all the queries
+
+2 refer to highlight to see the sample screenshot of the results we got after data cleaning
+
